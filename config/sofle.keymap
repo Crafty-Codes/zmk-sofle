@@ -53,15 +53,15 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      | PGDN | PGUP  |      |       |       |
-// |     | INS  | PSCR | GUI   |       |      |                |  <-  |   v  |   ^   |  ->  |       |       |
-// |     | ALT  | CTRL | SHIFT |       | CAPS |                |  <m- |   mv |   m^  |  -m> | scrUp | scrDw |
-// |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      | LCLK | MCLK | RCLK  |      |       |       |
+// |     | INS  | PSCR | GUI   | LCLK  | RCLK |                |  <-  |   v  |   ^   |  ->  |  del  |  BSPC |
+// |     | ALT  | CTRL | SHIFT | MCLK  | CAPS |                |  <m- |   mv |   m^  |  -m> | scrUp | scrDw |
+// |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //              |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans          &kp PG_UP       &kp PG_DN       &trans          &trans          &trans
-&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans          &trans
-&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &mwh SCROLL_UP  &mwh SCROLL_DOWN
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK       &trans          &trans          &trans
+&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &mkp LCLK    &mkp RCLK                &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DEL         &kp BSPC
+&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &mkp MCLK    &kp CLCK                 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &mwh SCROLL_UP  &mwh SCROLL_DOWN
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans          &trans          &trans          &trans          &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans          &trans          &trans          &trans
             >;
 

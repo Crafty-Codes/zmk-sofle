@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/Crafty-Codes
   projects:
     - name: zmk
-      remote: own
+      remote: ftc
       revision: mouse-ftc
       import: app/west.yml
   self:

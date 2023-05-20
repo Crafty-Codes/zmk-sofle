@@ -4,9 +4,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ftc
       url-base: https://github.com/ftc
+    - name: own
+      url-base: https://github.com/Crafty-Codes
   projects:
     - name: zmk
-      remote: ftc
+      remote: own
       revision: mouse-ftc
       import: app/west.yml
   self:
